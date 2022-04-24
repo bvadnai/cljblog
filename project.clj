@@ -5,9 +5,13 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [compojure "1.6.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [com.novemberain/monger "3.5.0"]]
+                 [ring/ring-jetty-adapter "1.9.5"]
+                 [com.novemberain/monger "3.5.0"]
+                 [hiccup "1.0.5"]
+                 [markdown-clj "1.11.0"]]
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler cljblog.handler/app}
+  :main cljblog.web
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.2"]]}})
